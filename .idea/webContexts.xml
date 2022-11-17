@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/MYCourse/web/htmls/familyhome/index.html" value="file://$PROJECT_DIR$/MYCourse/web/htmls/familyhome" />
+        <entry key="file://$PROJECT_DIR$/MYCourse/web/htmls/familyhome/index.jsp" value="file://$PROJECT_DIR$/MYCourse/web/htmls/familyhome" />
+        <entry key="file://$PROJECT_DIR$/MYCourse/web/htmls/managerhome/index.html" value="file://$PROJECT_DIR$/MYCourse/web/htmls/managerhome" />
+        <entry key="file://$PROJECT_DIR$/MYCourse/web/htmls/public_resource/fullcalendar/my_full_calendar.html" value="file://$PROJECT_DIR$/MYCourse/web/htmls/public_resource/fullcalendar" />
+        <entry key="file://$PROJECT_DIR$/UserCenter/web/jsp/UserRegisterLoad.jsp" value="file://$PROJECT_DIR$/UserCenter/web/jsp" />
+      </map>
+    </option>
+  </component>
+</project>

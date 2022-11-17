@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ForeignTradeRes/ForeignTradeRes.iml" filepath="$PROJECT_DIR$/ForeignTradeRes/ForeignTradeRes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MYCourse/MYCourse.iml" filepath="$PROJECT_DIR$/MYCourse/MYCourse.iml" />
       <module fileurl="file://$PROJECT_DIR$/UserCenter/UserCenter.iml" filepath="$PROJECT_DIR$/UserCenter/UserCenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebProgramsProject.iml" filepath="$PROJECT_DIR$/WebProgramsProject.iml" />
     </modules>
