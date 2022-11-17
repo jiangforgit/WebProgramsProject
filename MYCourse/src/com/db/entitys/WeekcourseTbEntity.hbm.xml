@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.WeekcourseTbEntity" table="weekcourse_tb" schema="my_course">
+        <id name="weekCourseId" column="WeekCourseId">
+            <generator class="increment"></generator>
+        </id>
+        <property name="weekCourseWeekDay" column="WeekCourseWeekDay"/>
+        <property name="weekCourseStartDate" column="WeekCourseStartDate"/>
+        <property name="weekCourseStartTime" column="WeekCourseStartTime"/>
+        <property name="weekCourseEndDate" column="WeekCourseEndDate"/>
+        <property name="weekCourseEndTime" column="WeekCourseEndTime"/>
+        <property name="weekCourseType" column="WeekCourseType"/>
+        <property name="weekCourseCId" column="WeekCourseCId"/>
+        <property name="weekCourseSId" column="WeekCourseSId"/>
+        <property name="weekCourseCreateTime" column="WeekCourseCreateTime"/>
+        <property name="weekCourseUpdateTime" column="WeekCourseUpdateTime"/>
+    </class>
+</hibernate-mapping>

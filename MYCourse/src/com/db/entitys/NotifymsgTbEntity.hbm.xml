@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.NotifymsgTbEntity" table="notifymsg_tb" schema="my_course">
+        <id name="notifyMsgId" column="NotifyMsgId">
+            <generator class="increment"></generator>
+        </id>
+        <property name="notifyMsgType" column="NotifyMsgType"/>
+        <property name="notifyMsgContent" column="NotifyMsgContent"/>
+        <property name="notifyMsgRelatedType" column="NotifyMsgRelatedType"/>
+        <property name="notifyMsgRelatedId" column="NotifyMsgRelatedId"/>
+        <property name="notifyMsgCreatorType" column="NotifyMsgCreatorType"/>
+        <property name="notifyMsgCreatorId" column="NotifyMsgCreatorId"/>
+        <property name="notifyMsgCreateTime" column="NotifyMsgCreateTime"/>
+        <property name="notifyMsgUpdateTime" column="NotifyMsgUpdateTime"/>
+    </class>
+</hibernate-mapping>

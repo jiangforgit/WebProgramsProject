@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.ScheduletaskTbEntity" table="scheduletask_tb" schema="my_course">
+        <id name="scheduleTaskId" column="ScheduleTaskId">
+            <generator class="increment"></generator>
+        </id>
+        <property name="scheduleTaskTitle" column="ScheduleTaskTitle"/>
+        <property name="scheduleTaskContent" column="ScheduleTaskContent"/>
+        <property name="scheduleTaskPicPath" column="ScheduleTaskPicPath"/>
+        <property name="scheduleTaskAudioPath" column="ScheduleTaskAudioPath"/>
+        <property name="scheduleTaskStatus" column="ScheduleTaskStatus"/>
+        <property name="scheduleTaskFullShare" column="ScheduleTaskFullShare"/>
+        <property name="scheduleTaskStartDate" column="ScheduleTaskStartDate"/>
+        <property name="scheduleTaskStartTime" column="ScheduleTaskStartTime"/>
+        <property name="scheduleTaskEndDate" column="ScheduleTaskEndDate"/>
+        <property name="scheduleTaskEndTime" column="ScheduleTaskEndTime"/>
+        <property name="scheduleTaskRemindTime" column="ScheduleTaskRemindTime"/>
+        <property name="scheduleTaskIsReminded" column="ScheduleTaskIsReminded"/>
+        <property name="scheduleTaskType" column="ScheduleTaskType"/>
+        <property name="scheduleTaskCreator" column="ScheduleTaskCreator"/>
+        <property name="scheduleTaskComment" column="ScheduleTaskComment"/>
+        <property name="scheduleTaskCreateTime" column="ScheduleTaskCreateTime"/>
+        <property name="scheduleTaskUpdateTime" column="ScheduleTaskUpdateTime"/>
+    </class>
+</hibernate-mapping>

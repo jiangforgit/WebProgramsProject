@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.CityTbEntity" table="city_tb" schema="user_center">
+        <id name="cityId" column="CityId"/>
+        <property name="cityName" column="CityName"/>
+        <property name="cityProvinceId" column="CityProvinceId"/>
+    </class>
+</hibernate-mapping>

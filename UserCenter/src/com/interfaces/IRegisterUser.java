@@ -1,9 +1,8 @@
 package com.interfaces;
 
-import com.db.entitys.UserAuthsEntity;
-import com.db.entitys.UsersEntity;
+import com.db.entitys.UsersTbEntity;
 
 public interface IRegisterUser {
 
-    boolean registerUser(UsersEntity usersEntity, UserAuthsEntity userAuthsEntity);
+    boolean registerUser(UsersTbEntity usersEntity);
 }

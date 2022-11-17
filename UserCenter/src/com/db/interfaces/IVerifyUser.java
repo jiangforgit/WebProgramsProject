@@ -2,5 +2,5 @@ package com.db.interfaces;
 
 public interface IVerifyUser {
 
-    boolean verifyPassword(String identifier,String credential);
+    boolean verifyPassword(String userName,String password);
 }

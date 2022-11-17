@@ -7,7 +7,7 @@ import java.util.Properties;
 public class PropertiesUtil {
 
     // 方法一：通过java.util.ResourceBundle读取资源属性文件
-    public static String getPropertyByName(String path, String name) {
+    public static String getPropertyByBundle(String path, String name) {
         String result = "";
         try {
             // 方法一：通过java.util.ResourceBundle读取资源属性文件
@@ -20,17 +20,12 @@ public class PropertiesUtil {
     }
 
     // 方法二：通过类加载目录getClassLoader()加载属性文件
-    public static String getPropertyByName2(String path, String name) {
+    public static String getPropertyByLoader(String path, String name) {
         String result = "";
         // 方法二：通过类加载目录getClassLoader()加载属性文件
         InputStream in = PropertiesUtil.class.getClassLoader()
                 .getResourceAsStream(path);
-        // InputStream in =
-        // this.getClass().getClassLoader().getResourceAsStream("mailServer.properties");
 
-        // 注：Object.class.getResourceAsStream在action中调用报错，在普通java工程中可用
-        // InputStream in =
-        // Object.class.getResourceAsStream("/mailServer.properties");
         Properties prop = new Properties();
         try {
             prop.load(in);

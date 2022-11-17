@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.CoursestudentTbEntity" table="coursestudent_tb" schema="my_course">
+        <composite-id>
+            <key-property name="courseStudentCId" column="CourseStudentCId"/>
+            <key-property name="courseStudentSId" column="CourseStudentSId"/>
+        </composite-id>
+        <property name="courseTotalNum" column="CourseTotalNum"/>
+        <property name="courseStudentCreateTime" column="CourseStudentCreateTime"/>
+        <property name="courseStudentUpdateTime" column="CourseStudentUpdateTime"/>
+    </class>
+</hibernate-mapping>

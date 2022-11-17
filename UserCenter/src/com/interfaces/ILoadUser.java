@@ -2,5 +2,5 @@ package com.interfaces;
 
 public interface ILoadUser {
 
-    boolean verifyLoad(String identifier,String credential);
+    boolean verifyLoad(String userName, String credential);
 }

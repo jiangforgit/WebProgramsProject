@@ -5,7 +5,7 @@ import com.interfaces.ILoadUser;
 
 public class LoadUser implements ILoadUser {
     @Override
-    public boolean verifyLoad(String identifier, String credential) {
-        return DbFactory.verifyUser().verifyPassword(identifier,credential);
+    public boolean verifyLoad(String userName, String password) {
+        return DbFactory.verifyUser().verifyPassword(userName,password);
     }
 }

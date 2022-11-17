@@ -9,12 +9,14 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="a5591dc1-1e62-4b96-9279-b2c01a3723ea" />
+          <unit-entry name="hibernate.cfg.xml" value="725c9d88-d87b-40a4-aecb-4163befe363c" />
+          <unit-entry name="src:hibernate.cfg.xml" value="725c9d88-d87b-40a4-aecb-4163befe363c" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
@@ -26,9 +28,11 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Hibernate 5.2.11-5.2.11" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.0.M26" level="application_server_libraries" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-8.0.30" level="application" />
+    <orderEntry type="library" name="Hibernate 5.2.17-5.2.17" level="project" />
   </component>
 </module>

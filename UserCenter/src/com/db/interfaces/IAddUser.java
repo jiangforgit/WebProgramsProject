@@ -1,9 +1,8 @@
 package com.db.interfaces;
 
-import com.db.entitys.UserAuthsEntity;
-import com.db.entitys.UsersEntity;
+import com.db.entitys.UsersTbEntity;
 
 public interface IAddUser {
 
-    boolean createUser(UsersEntity usersEntity, UserAuthsEntity userAuthsEntity);
+    boolean createUser(UsersTbEntity usersEntity);
 }

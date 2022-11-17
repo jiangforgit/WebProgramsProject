@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.TeacherTbEntity" table="teacher_tb" schema="my_course">
+        <id name="teacherId" column="TeacherId">
+            <generator class="increment"></generator>
+        </id>
+        <property name="teacherName" column="TeacherName"/>
+        <property name="teacherSex" column="TeacherSex"/>
+        <property name="teacherBirth" column="TeacherBirth"/>
+        <property name="teacherSchoolId" column="TeacherSchoolId"/>
+        <property name="teacherCreateTime" column="TeacherCreateTime"/>
+        <property name="teacherUpdateTime" column="TeacherUpdateTime"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.StudenthealthTbEntity" table="studenthealth_tb" schema="my_course">
+        <id name="studentHealthId" column="StudentHealthId">
+            <generator class="increment"></generator>
+        </id>
+        <property name="studentHealthStature" column="StudentHealthStature"/>
+        <property name="studentHealthWeight" column="StudentHealthWeight"/>
+        <property name="studentHealthBlood" column="StudentHealthBlood"/>
+        <property name="studentHealthBloodSugar" column="StudentHealthBloodSugar"/>
+        <property name="studentHealthSpo" column="StudentHealthSpo"/>
+        <property name="studentHealthStartSleep" column="StudentHealthStartSleep"/>
+        <property name="studentHealthEndSleep" column="StudentHealthEndSleep"/>
+        <property name="studentHealthSleepType" column="StudentHealthSleepType"/>
+        <property name="studentHealthStudentId" column="StudentHealthStudentId"/>
+        <property name="studentHealthCreateTime" column="StudentHealthCreateTime"/>
+        <property name="studentHealthUpdateTime" column="StudentHealthUpdateTime"/>
+    </class>
+</hibernate-mapping>

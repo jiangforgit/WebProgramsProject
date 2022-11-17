@@ -12,6 +12,7 @@
              <filter-name>login</filter-name>
              <url-pattern>/*</url-pattern>
         </filter-mapping>
+
     <servlet>
         <servlet-name>RegisterServerlet</servlet-name>
         <servlet-class>com.serverlets.RegisterServerlet</servlet-class>
@@ -20,13 +21,23 @@
         <servlet-name>RegisterServerlet</servlet-name>
         <url-pattern>/Register</url-pattern>
     </servlet-mapping>
+
     <servlet>
-        <servlet-name>ValidateLoadUser</servlet-name>
-        <servlet-class>com.serverlets.ValidateLoadUser</servlet-class>
+        <servlet-name>ValidateLoadUserServerlet</servlet-name>
+        <servlet-class>com.serverlets.ValidateLoadUserServerlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ValidateLoadUser</servlet-name>
+        <servlet-name>ValidateLoadUserServerlet</servlet-name>
         <url-pattern>/ValidateLoadUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutUerServerlet</servlet-name>
+        <servlet-class>com.serverlets.LogoutUserServerlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutUerServerlet</servlet-name>
+        <url-pattern>/LogoutUser</url-pattern>
     </servlet-mapping>
     
     <listener>

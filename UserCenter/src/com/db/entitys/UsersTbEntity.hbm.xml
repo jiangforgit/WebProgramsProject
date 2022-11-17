@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.UsersTbEntity" table="users_tb" schema="user_center">
+        <id name="userId" column="UserId"/>
+        <property name="userName" column="UserName"/>
+        <property name="userSex" column="UserSex"/>
+        <property name="userBirth" column="UserBirth"/>
+        <property name="userIcon" column="UserIcon"/>
+        <property name="userPhone" column="UserPhone"/>
+        <property name="userEmail" column="UserEmail"/>
+        <property name="userPassword" column="UserPassword"/>
+        <property name="userRegistType" column="UserRegistType"/>
+        <property name="userSignature" column="UserSignature"/>
+        <property name="userMainAddrId" column="UserMainAddrId"/>
+        <property name="userCreateTime" column="UserCreateTime"/>
+        <property name="userUpdateTime" column="UserUpdateTime"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.MediadataTbEntity" table="mediadata_tb" schema="my_course">
+        <id name="mediaDataId" column="MediaDataId">
+            <generator class="increment"></generator>
+        </id>
+        <property name="mediaDataType" column="MediaDataType"/>
+        <property name="mediaDataUri" column="MediaDataUri"/>
+        <property name="mediaDataMsg" column="MediaDataMsg"/>
+        <property name="mediaDataRelatedType" column="MediaDataRelatedType"/>
+        <property name="mediaDataRelatedId" column="MediaDataRelatedId"/>
+        <property name="mediaDataCreateTime" column="MediaDataCreateTime"/>
+        <property name="mediaDataUpdateTime" column="MediaDataUpdateTime"/>
+    </class>
+</hibernate-mapping>

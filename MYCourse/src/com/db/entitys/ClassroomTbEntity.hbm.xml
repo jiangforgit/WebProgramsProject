@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.ClassroomTbEntity" table="classroom_tb" schema="my_course">
+        <id name="classRoomId" column="ClassRoomId">
+            <generator class="increment"></generator>
+        </id>
+        <property name="classRoomName" column="ClassRoomName"/>
+        <property name="classRoomLocation" column="ClassRoomLocation"/>
+        <property name="classRoomVideoId" column="ClassRoomVideoId"/>
+        <property name="classRoomShoolId" column="ClassRoomShoolId"/>
+        <property name="classRoomCreateTime" column="ClassRoomCreateTime"/>
+        <property name="classRoomUpdateTime" column="ClassRoomUpdateTime"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.AddrTbEntity" table="addr_tb" schema="user_center">
+        <id name="addrId" column="AddrId"/>
+        <property name="addrCountryId" column="AddrCountryId"/>
+        <property name="addrProvinceId" column="AddrProvinceId"/>
+        <property name="addrCityId" column="AddrCityId"/>
+        <property name="addrStreet" column="AddrStreet"/>
+        <property name="addrBuilding" column="AddrBuilding"/>
+        <property name="addrHomeNum" column="AddrHomeNum"/>
+        <property name="addrPostCode" column="AddrPostCode"/>
+        <property name="addrPhone" column="AddrPhone"/>
+        <property name="addrUserId" column="AddrUserId"/>
+        <property name="addrCreateTime" column="AddrCreateTime"/>
+        <property name="addrUpdateTime" column="AddrUpdateTime"/>
+    </class>
+</hibernate-mapping>

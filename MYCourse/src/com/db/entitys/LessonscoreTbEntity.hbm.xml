@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.LessonscoreTbEntity" table="lessonscore_tb" schema="my_course">
+        <id name="lessonScoreId" column="LessonScoreId">
+            <generator class="increment"></generator>
+        </id>
+        <property name="lessonScore" column="LessonScore"/>
+        <property name="lessonScoreLId" column="LessonScoreLId"/>
+        <property name="lessonScoreSId" column="LessonScoreSId"/>
+        <property name="lessonScoreCreateTime" column="LessonScoreCreateTime"/>
+        <property name="lessonScoreUpdateTime" column="LessonScoreUpdateTime"/>
+    </class>
+</hibernate-mapping>

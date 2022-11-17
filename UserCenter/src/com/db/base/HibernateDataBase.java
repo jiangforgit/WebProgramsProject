@@ -1,24 +1,25 @@
 package com.db.base;
 
-import com.db.entitys.UserAuthsEntity;
-import com.db.entitys.UsersEntity;
+import com.db.entitys.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 public class HibernateDataBase {
-
     private static SessionFactory sessionFactory;
     private static Session session;
-
     public HibernateDataBase(){
         //1. 创建配置对象
         Configuration config = new Configuration().configure();
-        config.addClass(UsersEntity.class);
-        config.addClass(UserAuthsEntity.class);
+        config.addClass(UsersTbEntity.class);
+        config.addClass(AuthenTbEntity.class);
+        config.addClass(AddrTbEntity.class);
+        config.addClass(ContinentTbEntity.class);
+        config.addClass(CountryTbEntity.class);
+        config.addClass(ProvinceTbEntity.class);
+        config.addClass(CityTbEntity.class);
         //2. 创建服务注册对象
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(config.getProperties()).build();
         //3. 创建会话工厂对象

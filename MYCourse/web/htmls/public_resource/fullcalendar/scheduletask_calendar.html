@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>课程表</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="../public_css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/plugins/others/jquery-1.7.2.min.js"></script>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>-->
+
+<script type="text/javascript" src="js/plugins/forms/ui.spinner.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.mousewheel.js"></script>
+
+<script type="text/javascript" src="js/plugins/others/jquery-ui.min.js"></script>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>-->
+
+<script type="text/javascript" src="js/plugins/charts/excanvas.min.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.orderBars.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.pie.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.resize.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.sparkline.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/tables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/plugins/tables/jquery.sortable.js"></script>
+<script type="text/javascript" src="js/plugins/tables/jquery.resizable.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/autogrowtextarea.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.uniform.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.inputlimiter.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.autotab.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.chosen.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.dualListBox.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.cleditor.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.ibutton.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.validationEngine.js"></script>
+
+<script type="text/javascript" src="js/plugins/uploader/plupload.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/plupload.html4.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/plupload.html5.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/jquery.plupload.queue.js"></script>
+
+<script type="text/javascript" src="js/plugins/wizards/jquery.form.wizard.js"></script>
+<script type="text/javascript" src="js/plugins/wizards/jquery.validate.js"></script>
+<script type="text/javascript" src="js/plugins/wizards/jquery.form.js"></script>
+
+<script type="text/javascript" src="js/plugins/ui/jquery.collapsible.min.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.breadcrumbs.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.progress.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.timeentry.min.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.colorpicker.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.jgrowl.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.fileTree.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.sourcerer.js"></script>
+
+<script type="text/javascript" src="js/plugins/others/jquery.fullcalendar.js"></script>
+<script type="text/javascript" src="js/plugins/others/jquery.elfinder.js"></script>
+
+<script type="text/javascript" src="js/plugins/ui/jquery.easytabs.min.js"></script>
+<script type="text/javascript" src="js/files/bootstrap.js"></script>
+<script type="text/javascript" src="js/files/functions.js"></script>
+
+<script type="text/javascript" src="../../public_resource/public_js/datalistcheck.js"></script>
+<script type="text/javascript" src="js/files/scheduletask_calendar_v1.0.1.js"></script>
+<script type="text/javascript" src="../public_js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Calendar -->
+    <div class="widget">
+        <div id="scheduletask_calendar_head_div" class="whead calendarHeader">
+            <button id="scheduletask_calendar_pre_btn" onclick="preClick()" >pre</button>
+            <button id="scheduletask_calendar_next_btn" onclick="nextClick()" >next</button>
+        </div>
+        <div id="scheduletask_calendar"></div>
+    </div>
+
+    <div class="modal fade" id="addScheduleTaskModal" tabindex="-1" role="dialog" aria-labelledby="addScheduleTaskModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header blueBack">
+                    添加日程计划
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/MYCourse/addScheduleTask" method="post">
+                        <div id="addScheduleTask_scheduletasktype_div" class="modalbody_popup">
+                            <label>提醒周期：</label>
+                        </div>
+                        <div id="addScheduleTask_title_div" class="modalbody_popup">
+                            <input type="text" name="addScheduleTask_title" placeholder="标题" required=""/>
+                        </div>
+                        <div id="addScheduleTask_content_div" class="modalbody_popup">
+                            <textarea name="addScheduleTask_content" placeholder="内容描述" required=""></textarea>
+                        </div>
+                        <div id="addScheduleTask_picture_div" class="modalbody_popup">
+                            <input type="file" id="addScheduleTask_picture" name="addScheduleTask_picture" accept="image/*">
+                            <img id="addScheduleTask_picture_preview">
+                        </div>
+                        <div id="addScheduleTask_audio_div" class="modalbody_popup">
+                            <input type="file" id="addScheduleTask_audio" name="addScheduleTask_audio" accept="audio/*">
+                            <img id="addScheduleTask_audio_preview">
+                        </div>
+                        <div class="modalbody_popup">
+                            <label>开始时间：</label><input type="datetime-local" id="addScheduleTask_start" name="addScheduleTask_start" required=""/>
+                        </div>
+                        <div class="modalbody_popup">
+                            <label>截止时间：</label><input type="datetime-local" id="addScheduleTask_end" name="addScheduleTask_end" required=""/>
+                        </div>
+                        <div class="modalbody_popup">
+                            <label>提醒时间：</label><input type="text" id="addScheduleTask_reminder" name="addScheduleTask_reminder" placeholder="默认提前40分钟提醒" oninput="value=value.replace(/[^\d]/g,'')"/>
+                        </div>
+                        <div class="modalbody_popup">
+                            <label>共享给家庭成员：</label><input type="checkbox" id="addScheduleTask_fullshare" name="addScheduleTask_fullshare"/>
+                        </div>
+                        <input type="submit" value="添加记录">
+                    </form>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="showScheduleTaskModal" tabindex="-1" role="dialog" aria-labelledby="showScheduleTaskModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header blueBack">
+                    <label id="showScheduleTask_title">日程事务明细</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button id="showScheduleTask_delete_btn" type="button" class="delete"><span aria-hidden="true">删除</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="agileits_w3layouts_user">
+                        详细内容：<label id="showScheduleTask_content" class="modalpopup_content_label"></label>
+                    </div>
+                    <div class="agileits_w3layouts_user">
+                        起始时间：<label id="showScheduleTask_start" class="modalpopup_content_label"></label>
+                    </div>
+                    <div class="agileits_w3layouts_user">
+                        结束时间：<label id="showScheduleTask_end" class="modalpopup_content_label"></label>
+                    </div>
+                    <div class="agileits_w3layouts_user">
+                        家庭共享： <label id="showScheduleTask_fullshare" class="modalpopup_content_label"></label>
+                    </div>
+                    <div class="agileits_w3layouts_user">
+                        提醒时间： <label id="showScheduleTask_remindtime" class="modalpopup_content_label"></label>
+                    </div>
+                    <div class="agileits_w3layouts_user">
+                        日程创建者： <label id="showScheduleTask_creator" class="modalpopup_content_label"></label>
+                    </div>
+                    <div class="agileits_w3layouts_user">
+                        创建时间：<label id="showScheduleTask_createtime" class="showScheduleTask_createtime"></label>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

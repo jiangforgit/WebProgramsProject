@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.db.entitys.AuthenTbEntity" table="authen_tb" schema="user_center">
+        <id name="authNum" column="AuthNum"/>
+        <property name="authType" column="AuthType"/>
+        <property name="authRealName" column="AuthRealName"/>
+        <property name="authDateLine" column="AuthDateLine"/>
+        <property name="authFace" column="AuthFace"/>
+        <property name="authFinger" column="AuthFinger"/>
+        <property name="authCountryId" column="AuthCountryId"/>
+        <property name="authProvinceId" column="AuthProvinceId"/>
+        <property name="authCityId" column="AuthCityId"/>
+        <property name="authAddr" column="AuthAddr"/>
+        <property name="authCreateTime" column="AuthCreateTime"/>
+        <property name="authUpdateTime" column="AuthUpdateTime"/>
+    </class>
+</hibernate-mapping>
