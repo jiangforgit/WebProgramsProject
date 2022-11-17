@@ -179,7 +179,6 @@ function initScheduleShow(taskId){
         let scheduleTaskCreateTime = scheduleTaskobj.scheduleTaskCreateTime;
         let scheduleTaskUpdateTime = scheduleTaskobj.scheduleTaskUpdateTime;
 
-        document.getElementById("showScheduleTaskRecord_delete_btn").onclick = function (){deleteEvent(scheduleTaskId,scheduleTaskCreatorId);}
         document.getElementById("showScheduleTaskRecord_title").innerText = scheduleTaskTitle;
         document.getElementById("showScheduleTaskRecord_content").innerText = scheduleTaskContent;
         if(null != scheduleTaskPicPath){

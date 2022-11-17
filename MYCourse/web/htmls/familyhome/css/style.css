@@ -104,9 +104,6 @@ input[type="submit"],a,.agileinfo_social_icons li{
     text-transform: uppercase;
     font-weight: 600;
 }
-.navbar-nav > li:nth-child(3){
-    margin-right:19.6em !important;
-}
 .w3_navigation_pos{
 	position: absolute;
     top:13%;
@@ -327,6 +324,9 @@ input[type="submit"],a,.agileinfo_social_icons li{
     padding: 20px 0;
     width: 13%;
     background:#fa3d03;
+}
+.modalbody-item-padding{
+    padding: 2px 15px;
 }
 .agileits_w3layouts_user input[type="text"],.agileits_w3layouts_user input[type="email"], .agileits_w3layouts_user input[type="password"]{
 	outline: none;
@@ -578,15 +578,16 @@ input[type="submit"],a,.agileinfo_social_icons li{
 /*-- //button-effect --*/
 /*-- bootstrap-pop-up --*/
 .modal-header {
-    font-size: 2em;
+    font-size: 1em;
     color: #fff;
     font-family:'Handlee', cursive;
     text-align: center;
     text-transform: uppercase;
-    background:#65b126;
     border-bottom: none;
     letter-spacing: 10px;
 }
+.greenBack { background: #65b126; }
+.blueBack { background: #5d92b7; }
 .close {
     opacity: 1;
 }
@@ -613,7 +614,14 @@ input[type="submit"],a,.agileinfo_social_icons li{
     font-weight: 600;
 }
 .modal-body {
-    padding:0;
+    padding: 0px;
+}
+.modalpopup_content_label{
+    margin: 5px 2px 5px 2px;
+    padding: 5px 6px 4px 6px;
+    -webkit-border-radius : 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
 }
 .modal-content {
     border-radius: 0;
@@ -622,32 +630,6 @@ button.close {
     font-size: 1em;
     color:#2f6105;
 	outline: none;
-}
-.delete {
-    float: right;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 1;
-    margin: 0 15px 0 0;
-    padding: 3px;
-    letter-spacing: 3px;
-    color: white;
-    background: transparent;
-    text-shadow: 0 1px 0 #fff;
-    /*filter: alpha(opacity=20);*/
-    opacity: .2;
-}
-.delete:hover,
-.delete:focus {
-    color: white;
-    background-color: red;
-    text-decoration: none;
-    cursor: pointer;
-    /*filter: alpha(opacity=50);*/
-    opacity: .5;
-}
-.modal-header .delete {
-    margin-top: -2px;
 }
 .w3_modal_body_left {
     padding-left: 0;
@@ -2049,9 +2031,6 @@ span.char26 {
 	.w3_navigation_pos h1 a {
 		font-size: .8em;
 	}
-	.navbar-nav > li:nth-child(3) {
-		margin-right: 15.6em !important;
-	}
 	.w3_navigation_pos {
 		left: 43.5%;
 	}
@@ -2299,9 +2278,6 @@ span.char26 {
 		margin: 1em;
 		font-size: 14px;
 	}
-	.navbar-nav > li:nth-child(3) {
-		margin-right: 1em !important;
-	}
 	.menu--miranda .menu__item:last-child {
 		margin-right: 1em;
 	}
@@ -2397,7 +2373,7 @@ span.char26 {
 		font-size: 2em;
 	}
 	.modal-header {
-		font-size: 1.7em;
+		font-size: 0.7em;
 		letter-spacing: 5px;
 	}
 	.w3_modal_body_right h4 {
@@ -2903,7 +2879,7 @@ span.char26 {
 		display:inline-block;
 	}
 	.modal-header {
-		font-size: 1.3em;
+		font-size: 0.5em;
 		letter-spacing: 3px;
 		padding: 10px;
 	}

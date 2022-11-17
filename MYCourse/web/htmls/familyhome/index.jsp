@@ -663,7 +663,7 @@
 	<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
+				<div class="modal-header greenBack">
 					Nursery
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
 				</div>
@@ -782,25 +782,24 @@
 				<div class="modal-header blueBack">
 					<label id="showScheduleTaskRecord_title">日程事务明细</label>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<button id="showScheduleTaskRecord_delete_btn" type="button" class="delete"><span aria-hidden="true">删除</span></button>
 				</div>
 				<div class="modal-body">
-					<div class="agileits_w3layouts_user">
+					<div class="agileits_w3layouts_user modalbody-item-padding">
 						详细内容：<label id="showScheduleTaskRecord_content" class="modalpopup_content_label"></label>
 					</div>
-					<div class="agileits_w3layouts_user">
+					<div class="agileits_w3layouts_user modalbody-item-padding">
 						日程时间：<label id="showScheduleTaskRecord_time" class="modalpopup_content_label"></label>
 					</div>
-					<div class="agileits_w3layouts_user">
+					<div class="agileits_w3layouts_user modalbody-item-padding">
 						家庭共享： <label id="showScheduleTaskRecord_fullshare" class="modalpopup_content_label"></label>
 					</div>
-					<div class="agileits_w3layouts_user">
+					<div class="agileits_w3layouts_user modalbody-item-padding">
 						提醒时间： <label id="showScheduleTaskRecord_remindtime" class="modalpopup_content_label"></label>
 					</div>
-					<div class="agileits_w3layouts_user">
+					<div class="agileits_w3layouts_user modalbody-item-padding">
 						日程创建者： <label id="showScheduleTaskRecord_creator" class="modalpopup_content_label"></label>
 					</div>
-					<div class="agileits_w3layouts_user">
+					<div class="agileits_w3layouts_user modalbody-item-padding">
 						创建时间：<label id="showScheduleTaskRecord_createtime" class="showScheduleTask_createtime"></label>
 					</div>
 					<div class="clearfix"> </div>
