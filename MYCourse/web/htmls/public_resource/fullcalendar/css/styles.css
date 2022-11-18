@@ -934,14 +934,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 
 /* === Widget and widget head elements === */
 
-.widget { background: #f7f7f7; border: 1px solid #cdcdcd; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; box-shadow: 0 2px 2px -2px #ccc; margin-top: 35px; position: relative; }
-.widget > [class*="whead"] { border-bottom: 1px solid #cdcdcd; box-shadow: 0 1px 0 #fff; -webkit-box-shadow: 0 1px 0 #fff; -moz-box-shadow: 0 1px 0 #fff; text-shadow: 0 1px #fff; -webkit-border-top-right-radius: 3px; -webkit-border-top-left-radius: 3px; -moz-border-radius-topright: 3px; -moz-border-radius-topleft: 3px;  position: relative; }
+.widget {border: 1px solid #cdcdcd; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; box-shadow: 0 2px 2px -2px #ccc; position: relative; }
+.widget > [class*="whead"] {box-shadow: 0 1px 0 #fff; -webkit-box-shadow: 0 1px 0 #fff; -moz-box-shadow: 0 1px 0 #fff; text-shadow: 0 1px #fff; -webkit-border-top-right-radius: 3px; -webkit-border-top-left-radius: 3px; -moz-border-radius-topright: 3px; -moz-border-radius-topleft: 3px;  position: relative; }
 .whead a { color: #636363; }
 .widget > [class*="whead"] h6 { float: left; display: block; padding: 8px 14px 7px 14px; font-size: 12px; font-weight: bold;}
 .widget .body { padding: 14px 16px; }
 
 .whead {  color: #636363;
-background: #f8f8f8;
+
 background: -moz-linear-gradient(top,  #f8f8f8 0%, #e8e8e8 100%);
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#e8e8e8));
 background: -webkit-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
@@ -950,8 +950,18 @@ background: -ms-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
 background: linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e8e8e8',GradientType=0 );
 }
+.wheadCenter{
+ position: center;
+ margin: 0 auto;
+ text-align: center;
+}
 .calendarHeader {
- background: #f7f7f7;float: left; display: inline-block; margin: 10px 10px 10px 10px; padding: 5px 5px 5px 5px; font-size: 12px; font-weight: bold;
+ background: transparent;float: left; display: inline-block; padding: 5px 10px; font-size: 12px; font-weight: bold;
+}
+.calendarHeaderBtn{
+ background: transparent;
+ padding: 5px 10px;
+ border: none;
 }
 .wheadLight {  color: #636363;
 background: #ffffff;

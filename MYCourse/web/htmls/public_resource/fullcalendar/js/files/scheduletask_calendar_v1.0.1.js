@@ -1,9 +1,10 @@
 $(function() {
 
     //===== Calendar =====//
-    var fullcalendarObj = fullcalendarJsonObj();
+    var fullcalendarObj = fullcalendarJsonObj('month');
     $('#scheduletask_calendar').fullCalendar(fullcalendarObj);
 
+    $('#scheduletask_calendar').fullCalendar('removeEvents');
     getScheduleTasks();
 
     apendScheduleTaskTypes();
@@ -19,23 +20,27 @@ function getScheduleTasks(){
             eventArray = getEventData(object);
             events = events.concat(eventArray);
         });
-        var fullcalendarObj = fullcalendarJsonObj();
+        var view = $('#scheduletask_calendar').fullCalendar('getView');
+        var fullcalendarObj = fullcalendarJsonObj(view.name);
         fullcalendarObj['events'] = events;
         // console.log(JSON.stringify(fullcalendarObj));
-        $('#scheduletask_calendar').fullCalendar('destroy');
-        $('#scheduletask_calendar').fullCalendar(fullcalendarObj);
+        // console.log("view.name="+view.name);
+
+        // $('#scheduletask_calendar').fullCalendar('destroy');
+        // $('#scheduletask_calendar').fullCalendar(fullcalendarObj);
+        $('#scheduletask_calendar').fullCalendar('addEventSource', events);
     },"text");
 }
 
-function fullcalendarJsonObj(){
+function fullcalendarJsonObj(defaultView){
     var jsonObj = {};
 
     jsonObj['header'] = {
-        left: 'prev,next,today',//prevYear,nextYear,today
+        left: 'none',//'prev,next,today,prevYear,nextYear,today'
         center: 'title',
         right: 'month,agendaWeek,agendaDay'
     };
-    // jsonObj['defaultView'] = 'agendaWeek';
+    jsonObj['defaultView'] = defaultView;
     jsonObj['buttonText'] =  {
         today: "今日",
         month: "月",
@@ -46,6 +51,8 @@ function fullcalendarJsonObj(){
     // jsonObj['height'] = 500;
     // jsonObj['contentHeight'] = 400;
     // jsonObj['aspectRatio'] = 1.50;
+
+    jsonObj['titleFormat'] = {month:"MMMM yyyy",week:"MMM d日 [ yyyy]{ '~'[ MMM] d日 yyyy}",day:"dddd, MMM d日, yyyy"};
 
     jsonObj['allDaySlot'] = false;
     jsonObj['allDayText'] = "全天";
@@ -59,10 +66,12 @@ function fullcalendarJsonObj(){
     jsonObj['maxTime'] = 21;
 
     // jsonObj['monthNames'] = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    jsonObj['monthNames'] = ["一月", "二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+    // jsonObj['monthNames'] = ["一月", "二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+    jsonObj['monthNames'] = ["1月", "2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
 
     // jsonObj['monthNamesShort'] = ["Jan", "Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-    jsonObj['monthNamesShort'] = ["一月", "二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+    // jsonObj['monthNamesShort'] = ["一月", "二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+    jsonObj['monthNamesShort'] = ["1月", "2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
 
     // jsonObj['dayNames'] = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     jsonObj['dayNames'] = ["周天","周一","周二","周三","周四","周五","周六"];
@@ -268,11 +277,19 @@ function deleteEvent(event){
 }
 
 function preClick(){
+    $('#scheduletask_calendar').fullCalendar('removeEvents');
     $('#scheduletask_calendar').fullCalendar('prev');
     getScheduleTasks();
 }
 
+function todayClick(){
+    $('#scheduletask_calendar').fullCalendar('removeEvents');
+    $('#scheduletask_calendar').fullCalendar('today');
+    getScheduleTasks();
+}
+
 function nextClick(){
+    $('#scheduletask_calendar').fullCalendar('removeEvents');
     $('#scheduletask_calendar').fullCalendar('next');
     getScheduleTasks();
 }

@@ -78,8 +78,9 @@
     <!-- Calendar -->
     <div class="widget">
         <div id="scheduletask_calendar_head_div" class="whead calendarHeader">
-            <button id="scheduletask_calendar_pre_btn" onclick="preClick()" >pre</button>
-            <button id="scheduletask_calendar_next_btn" onclick="nextClick()" >next</button>
+            <button id="scheduletask_calendar_pre_btn" class="calendarHeaderBtn" onclick="preClick()" >&lt;</button>
+            <button id="scheduletask_calendar_today_btn" class="calendarHeaderBtn" onclick="todayClick()" >今日</button>
+            <button id="scheduletask_calendar_next_btn" class="calendarHeaderBtn" onclick="nextClick()" >&gt;</button>
         </div>
         <div id="scheduletask_calendar"></div>
     </div>
@@ -158,7 +159,7 @@
                         日程创建者： <label id="showScheduleTask_creator" class="modalpopup_content_label"></label>
                     </div>
                     <div class="agileits_w3layouts_user">
-                        创建时间：<label id="showScheduleTask_createtime" class="showScheduleTask_createtime"></label>
+                        创建时间：<label id="showScheduleTask_createtime" class="modalpopup_content_label"></label>
                     </div>
                     <div class="clearfix"> </div>
                 </div>

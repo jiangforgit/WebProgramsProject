@@ -76,7 +76,14 @@
 
     <!-- Calendar -->
     <div class="widget">
-        <div id="calendar_head_div" class="whead calendarHeader"><label>选择家庭宝贝：</label> </div>
+        <div id="calendar_head_div" class="wheadCenter">
+            <label>选择家庭宝贝：</label>
+        </div>
+        <div id="calendar_head_btn_div" class="whead calendarHeader">
+            <button id="scheduletask_calendar_pre_btn" class="calendarHeaderBtn" onclick="preClick()" >&lt;</button>
+            <button id="scheduletask_calendar_today_btn" class="calendarHeaderBtn" onclick="todayClick()" >今日</button>
+            <button id="scheduletask_calendar_next_btn" class="calendarHeaderBtn" onclick="nextClick()" >&gt;</button>
+        </div>
         <div id="weekcourse_calendar"></div>
     </div>
 

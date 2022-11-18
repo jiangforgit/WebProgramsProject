@@ -800,7 +800,7 @@
 						日程创建者： <label id="showScheduleTaskRecord_creator" class="modalpopup_content_label"></label>
 					</div>
 					<div class="agileits_w3layouts_user modalbody-item-padding">
-						创建时间：<label id="showScheduleTaskRecord_createtime" class="showScheduleTask_createtime"></label>
+						创建时间：<label id="showScheduleTaskRecord_createtime" class="modalpopup_content_label"></label>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
