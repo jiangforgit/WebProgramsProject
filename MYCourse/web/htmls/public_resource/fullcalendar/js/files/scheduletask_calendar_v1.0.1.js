@@ -221,8 +221,8 @@ function initEventShow(event){
     if(null != scheduleTaskAudioPath){
 
     }
-    document.getElementById("showScheduleTask_start").innerText = $.fullCalendar.formatDate(startDate,"yyyy-MM-dd HH:mm:ss");
-    document.getElementById("showScheduleTask_end").innerText = $.fullCalendar.formatDate(endDate,"yyyy-MM-dd HH:mm:ss");
+    document.getElementById("showScheduleTask_start").innerText = "(周"+getWeekDayFromDate(startDate)+") "+$.fullCalendar.formatDate(startDate,"yyyy-MM-dd HH:mm:ss");
+    document.getElementById("showScheduleTask_end").innerText = "(周"+getWeekDayFromDate(endDate)+") "+$.fullCalendar.formatDate(endDate,"yyyy-MM-dd HH:mm:ss");
     if(null != scheduleTaskFullShare){
         if(1 == scheduleTaskFullShare){
             document.getElementById("showScheduleTask_fullshare").innerText = "家庭全员共享";

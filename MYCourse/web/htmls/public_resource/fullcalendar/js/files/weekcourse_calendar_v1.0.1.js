@@ -101,13 +101,12 @@ function fullcalendarJsonObj(defaultView){
     };
 
     jsonObj['eventClick'] = function(event, jsEvent, view){//当点击日历中的某一日程（事件）时，触发此操作
-        var weekCourseId = event.weekCourseId;
         var title = event.title;
         var startDate = new Date(event.start);
         var endDate = new Date(event.end);
         document.getElementById("showWeekCourse_title").innerHTML = title;
-        document.getElementById("showWeekCourse_start").innerHTML = $.fullCalendar.formatDate(startDate,"yyyy-MM-dd HH:mm:ss");
-        document.getElementById("showWeekCourse_end").innerHTML =  $.fullCalendar.formatDate(endDate,"yyyy-MM-dd HH:mm:ss");
+        document.getElementById("showWeekCourse_start").innerHTML = "(周"+getWeekDayFromDate(startDate)+") "+$.fullCalendar.formatDate(startDate,"yyyy-MM-dd HH:mm:ss");
+        document.getElementById("showWeekCourse_end").innerHTML =  "(周"+getWeekDayFromDate(endDate)+") "+$.fullCalendar.formatDate(endDate,"yyyy-MM-dd HH:mm:ss");
         document.getElementById("showWeekCourse_delete_btn").onclick = function (){deleteEvent(event);}
         $('#showWeekCourseModal').modal('show');
     };
