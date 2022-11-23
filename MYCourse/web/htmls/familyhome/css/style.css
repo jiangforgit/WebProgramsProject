@@ -328,7 +328,7 @@ input[type="submit"],a,.agileinfo_social_icons li{
 .modalbody-item-padding{
     padding: 2px 15px;
 }
-.agileits_w3layouts_user input[type="text"],.agileits_w3layouts_user input[type="email"], .agileits_w3layouts_user input[type="password"]{
+.agileits_w3layouts_user input[type="text"],.agileits_w3layouts_user input[type="email"], .agileits_w3layouts_user input[type="password"],.agileits_w3layouts_user input[type="date"]{
 	outline: none;
     padding: 15px 10px 15px 80px;
     font-size: 14px;
@@ -337,7 +337,8 @@ input[type="submit"],a,.agileinfo_social_icons li{
     width: 100%;
 	font-weight:600;
 }
-.agileits_w3layouts_user input[type="text"]::-webkit-input-placeholder,.agileits_w3layouts_user input[type="email"]::-webkit-input-placeholder, .agileits_w3layouts_user input[type="password"]::-webkit-input-placeholder{
+.agileits_w3layouts_user input[type="text"]::-webkit-input-placeholder,.agileits_w3layouts_user input[type="email"]::-webkit-input-placeholder,
+.agileits_w3layouts_user input[type="password"]::-webkit-input-placeholder,.agileits_w3layouts_user input[type="date"]::-webkit-input-placeholder{
 	color: #9d9d9d !important;
 }
 .agileits_w3layouts_user:nth-child(2),.agileits_w3layouts_user_agileits{
@@ -2746,7 +2747,7 @@ span.char26 {
 	.w3_agileits_contact_left,.w3_agileits_contact_right {
 		padding: 0;
 	}
-	.agileits_w3layouts_user input[type="text"], .agileits_w3layouts_user input[type="email"], .agileits_w3layouts_user input[type="password"] {
+	.agileits_w3layouts_user input[type="text"], .agileits_w3layouts_user input[type="email"], .agileits_w3layouts_user input[type="password"],.agileits_w3layouts_user input[type="date"] {
 		padding: 15px 10px 15px 65px;
 	}
 }
@@ -2770,7 +2771,7 @@ span.char26 {
 	.wthree_footer_grid_right_main1 {
 		padding: 1em;
 	}
-	.agileits_w3layouts_user input[type="text"], .agileits_w3layouts_user input[type="email"], .agileits_w3layouts_user input[type="password"] {
+	.agileits_w3layouts_user input[type="text"], .agileits_w3layouts_user input[type="email"], .agileits_w3layouts_user input[type="password"],.agileits_w3layouts_user input[type="date"] {
 		padding:12px 10px 12px 65px;
 		font-size: 13px;
 	}
@@ -2929,7 +2930,7 @@ span.char26 {
 	.wthree_footer_grid_left1 h4 {
 		margin-bottom: 1em;
 	}
-	.agileits_w3layouts_user input[type="text"], .agileits_w3layouts_user input[type="email"], .agileits_w3layouts_user input[type="password"] {
+	.agileits_w3layouts_user input[type="text"], .agileits_w3layouts_user input[type="email"], .agileits_w3layouts_user input[type="password"],.agileits_w3layouts_user input[type="date"] {
 		padding: 12px 10px 12px 50px;
 	}
 }

@@ -213,7 +213,6 @@ function initEventShow(event){
     let startDate = new Date(event.start);
     let endDate = new Date(event.end);
 
-    document.getElementById("showScheduleTask_delete_btn").onclick = function (){deleteEvent(event);}
     document.getElementById("showScheduleTask_title").innerText = scheduleTaskTitle;
     document.getElementById("showScheduleTask_content").innerText = scheduleTaskContent;
     if(null != scheduleTaskPicPath){
@@ -247,6 +246,7 @@ function initEventShow(event){
     document.getElementById("showScheduleTask_creator").innerText = scheduleTaskCreator;
     let createTime = new Date(scheduleTaskCreateTime);
     document.getElementById("showScheduleTask_createtime").innerText = $.fullCalendar.formatDate(createTime,"yyyy-MM-dd HH:mm:ss");
+    document.getElementById("showScheduleTask_delete_btn").onclick = function (){deleteEvent(event);}
     $('#showScheduleTaskModal').modal('show');
 }
 

@@ -187,32 +187,7 @@
 					<input type="text" name="regist_studentMotto" placeholder="格言" required="">
 				</div>
 				<div class="agileits_w3layouts_user">
-					<br>
-					出生年月：
-					<input type="text" name="regist_studentbirdth_year" list="rs_year" placeholder="年" required="">
-						<datalist id="rs_year">
-							<script>
-								for(var i=1900;i<=2022;i++){
-									document.write("<option value="+i+">"+i+"</option>");
-								}
-							</script>
-						</datalist>
-					<input type="text" name="regist_studentbirdth_month" list="rs_month" placeholder="月" required="">
-						<datalist id="rs_month">
-							<script>
-								for(var i=1;i<=12;i++){
-									document.write("<option value="+i+">"+i+"</option>");
-								}
-							</script>
-						</datalist>
-					<input type="text" name="regist_studentbirdth_day" list="rs_day" placeholder="日" required="">
-						<datalist id="rs_day">
-							<script>
-								for(var i=1;i<=31;i++){
-									document.write("<option value="+i+">"+i+"</option>");
-								}
-							</script>
-						</datalist>
+					<br><label >出生年月</label><input type="date" name="regist_studentBirdth" required=""/>
 				</div>
 				<div class="agileits_w3layouts_user">
 					<label class="radio-inline"><input type="radio" name="regist_studentSex" value="secrecy" checked="checked">保密</label>

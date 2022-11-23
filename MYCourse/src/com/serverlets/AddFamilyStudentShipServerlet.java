@@ -26,9 +26,7 @@ public class AddFamilyStudentShipServerlet extends HttpServlet {
         String regist_studentName = req.getParameter("regist_studentName");
         String regist_studentInterest = req.getParameter("regist_studentInterest");
         String regist_studentMotto = req.getParameter("regist_studentMotto");
-        String regist_studentbirdth_year = req.getParameter("regist_studentbirdth_year");
-        String regist_studentbirdth_month = req.getParameter("regist_studentbirdth_month");
-        String regist_studentbirdth_day = req.getParameter("regist_studentbirdth_day");
+        String regist_studentBirdth = req.getParameter("regist_studentBirdth");
         String regist_studentSex = req.getParameter("regist_studentSex");
 
         StudentTbEntity studentTbEntity = new StudentTbEntity();
@@ -36,7 +34,7 @@ public class AddFamilyStudentShipServerlet extends HttpServlet {
         studentTbEntity.setStudentSex((byte) EnumUserSex.valueOf(regist_studentSex).ordinal());
         studentTbEntity.setStudentInterest(regist_studentInterest);
         studentTbEntity.setStudentMotto(regist_studentMotto);
-        studentTbEntity.setStudentBirth(Timestamp.valueOf(regist_studentbirdth_year+"-"+regist_studentbirdth_month+"-"+regist_studentbirdth_day+" 00:00:00"));
+        studentTbEntity.setStudentBirth(Timestamp.valueOf(regist_studentBirdth+" 00:00:00"));
         studentTbEntity.setStudentCreateTime(createTime);
 
         FamilystudentTbEntity familystudentTbEntity = new FamilystudentTbEntity();

@@ -58,9 +58,9 @@
         <option value="Jsp File" />
         <option value="HTML File" />
         <option value="Enum" />
+        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -142,9 +142,9 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
-    <option name="CUSTOM_FILTER" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" value="regist_studentBirdth" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -690,7 +690,7 @@
       <workItem from="1668390656697" duration="8885000" />
       <workItem from="1668486970165" duration="2099000" />
       <workItem from="1668569892787" duration="848000" />
-      <workItem from="1668571272192" duration="30261000" />
+      <workItem from="1668571272192" duration="76435000" />
     </task>
     <servers />
   </component>

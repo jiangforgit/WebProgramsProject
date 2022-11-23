@@ -120,4 +120,13 @@
         <servlet-name>removeScheduleTask</servlet-name>
         <url-pattern>/removeScheduleTask</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>removeWeekCourse</servlet-name>
+        <servlet-class>com.serverlets.RemoveWeekCourseServerlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>removeWeekCourse</servlet-name>
+        <url-pattern>/removeWeekCourse</url-pattern>
+    </servlet-mapping>
 </web-app>

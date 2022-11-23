@@ -101,12 +101,14 @@ function fullcalendarJsonObj(defaultView){
     };
 
     jsonObj['eventClick'] = function(event, jsEvent, view){//当点击日历中的某一日程（事件）时，触发此操作
+        var weekCourseId = event.weekCourseId;
         var title = event.title;
         var startDate = new Date(event.start);
         var endDate = new Date(event.end);
         document.getElementById("showWeekCourse_title").innerHTML = title;
         document.getElementById("showWeekCourse_start").innerHTML = $.fullCalendar.formatDate(startDate,"yyyy-MM-dd HH:mm:ss");
         document.getElementById("showWeekCourse_end").innerHTML =  $.fullCalendar.formatDate(endDate,"yyyy-MM-dd HH:mm:ss");
+        document.getElementById("showWeekCourse_delete_btn").onclick = function (){deleteEvent(event);}
         $('#showWeekCourseModal').modal('show');
     };
 
@@ -124,6 +126,7 @@ function fullcalendarJsonObj(defaultView){
 function getEventData(object) {
     var eventArray = [];
 
+    var weekCourseId = object[0].weekCourseId;
     var startDate = object[0].weekCourseStartDate;
     var startTime = object[0].weekCourseStartTime;
     var endDate = object[0].weekCourseEndDate;
@@ -149,6 +152,7 @@ function getEventData(object) {
                 mDate.setDate(CalendarStartDate.getDate()+i);
                 if(weekDay == mDate.getDay()){
                     var  event = {};
+                    event['weekCourseId'] = weekCourseId;
                     event['title'] = null==title?"title":title;
                     var sdate = new Date();
                     sdate.setTime(startTime);
@@ -202,6 +206,31 @@ function apendStudentCourses(){
             $("#addWeekCourse_course").append("<option value=\""+object[1].courseId+"\">"+object[1].courseName+"</option>");
         });
     },"text");
+}
+
+function deleteEvent(event){
+    let weekCourseId = event.weekCourseId;
+    if(confirm("确定删除该课程记录吗？\n如果是周期课程，将会同步删除该周期内的所有课程记录。")){
+        var pathName = window.location.pathname;
+        var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+        $.post(projectName+"/removeWeekCourse",{weekCourseId:weekCourseId},function (data) {
+            if(isJSON(data)){
+                let object = JSON.parse(data);
+                let resultcode = object.resultcode;
+                let resultdes = object.resultdes;
+                if(null != resultcode && null != resultdes){
+                    alert(resultdes);
+                    if(1 == resultcode){
+                        window.location.reload();
+                    }
+                }else {
+                    alert("返回数据为空");
+                }
+            }else {
+                alert("返回数据有误");
+            }
+        },"text");
+    }
 }
 
 function preClick(){

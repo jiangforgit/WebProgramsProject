@@ -5171,6 +5171,7 @@ button.close {
   min-height: 16.42857143px;
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
+  text-align: center;
 }
 .modal-header .close {
   margin-top: -2px;
@@ -5185,6 +5186,7 @@ button.close {
 .modal-body {
   position: relative;
   padding: 20px;
+  text-align: center;
 }
 .modalbody_popup{
   position: relative;
@@ -5211,6 +5213,24 @@ button.close {
 }
 .modal-body  input[type="submit"]:hover{
   background:#fa3d03;
+}
+.modalbody_delete_btn{
+  position: relative;
+  top: 10px;left: 0;right: 0;bottom: 5px;
+  text-align: center;
+  outline: none;
+  border: none;
+  background: #fa3d03;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 8px 0;
+  width: 40%;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.modalbody_delete_btn:hover{
+  background:#65b126;
 }
 .modal-footer {
   padding: 19px 20px 20px;

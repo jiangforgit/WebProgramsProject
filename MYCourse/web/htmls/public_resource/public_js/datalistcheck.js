@@ -10,7 +10,6 @@ function checkSelectSet(e) {
 }
 
 function addDataListListener(eid) {
-    console.log("addDataListListener");
     checkSelectSet(eid);
     // document.querySelector('#'+eid).addEventListener('input', checkSelectSet)
 }

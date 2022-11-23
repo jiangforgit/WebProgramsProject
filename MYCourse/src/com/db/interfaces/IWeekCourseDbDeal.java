@@ -11,4 +11,6 @@ public interface IWeekCourseDbDeal {
     Collection queryWeekCourseByStudentId(int studentId);
 
     Collection queryWeekCourseByCourseId(int studentId);
+
+    boolean deleteWeekCourseById(int weekCourseId);
 }

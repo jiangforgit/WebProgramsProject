@@ -1,6 +1,7 @@
 package com.db.impls;
 
 import com.db.base.HibernateDataBase;
+import com.db.entitys.ScheduletaskTbEntity;
 import com.db.entitys.WeekcourseTbEntity;
 import com.db.interfaces.IWeekCourseDbDeal;
 import org.hibernate.Session;
@@ -67,5 +68,24 @@ public class WeekCourseDbDeal extends HibernateDataBase implements IWeekCourseDb
             closeSessionFactory();
         }
         return result;
+    }
+
+    @Override
+    public boolean deleteWeekCourseById(int weekCourseId) {
+        Session session = getSession();
+        try {
+            Transaction transaction = session.beginTransaction();
+            WeekcourseTbEntity weekcourseTbEntity = new WeekcourseTbEntity();
+            weekcourseTbEntity.setWeekCourseId(weekCourseId);
+            session.delete(weekcourseTbEntity);
+            transaction.commit();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            closeSession();
+            closeSessionFactory();
+        }
+        return false;
     }
 }
