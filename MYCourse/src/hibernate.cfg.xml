@@ -10,7 +10,7 @@
     <!-- 配置hibernate的基本信息 -->
     <property name="hibernate.connection.username">root</property>
     <!--连接数据库是密码-->
-    <property name="hibernate.connection.password">123456</property>
+    <property name="hibernate.connection.password">9haojoin.7course_jiang2</property>
     <!-- 配置数据库方言dialect -->
     <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
     <property name="show_sql">true</property>
